@@ -25,7 +25,7 @@
 .sub-header-1{
     min-height: 80vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.3),rgba(4,9,30,0.3)),url(/Media/resbackground.jpg) ;
+    background-image: linear-gradient(rgba(4,9,30,0.3),rgba(4,9,30,0.3)),url(./Media/resbackground.jpg) ;
     background-size: cover;
     background-position: center;
     position: relative;
