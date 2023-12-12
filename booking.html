@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="stylesheet" href="Styles/index.css">
+    <script src="Scripts/main.js" defer></script>
+    
+</head>
+<body class="booking_background">
+    <div class="sub-header">
+        <nav>
+            <a href="index.html"><img src="Media/whitelogonobg.png" alt="logo"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="hotel.html">Hotels</a></li>
+                    <li><a href="things.html">Things To Do</a></li>
+                    <li><a href="restaurant.html">Restuarant</a></li>
+                    <li><a href="event.html">Events</a></li>
+                    <li><a href="wedding.html">Weddings</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Regulations -->
+    <br>
+    <h1>Hotel & Adventure Booking</h1>
+    <div class="booking-main">
+        <p id="paragraphBooking">Before booking your stay, please take note of the following rules and regulations to ensure a smooth and enjoyable experience:</p>
+        <br>
+        <div class="booking_list">
+            <ul>
+                <li>Bookings should be made at least two weeks in advance of your intended stay</li>
+                <li>Please be aware that once payment is processed, no refunds will be issued</li>
+                <li>Guests must provide valid identification and a credit card upon check-in</li>
+                <li>Check-in time is at 2 : 30 pm, and check-out time is at 12 : 00 pm</li>
+                <li>A security deposit may be required during your stay</li>
+                <li>All guests are expected to adhere to our hotel's code of conduct and respect other guests' privacy</li>
+            </ul>
+        </div>
+        <br>
+        <p class="para">
+            We appreciate your cooperation in making your stay with us enjoyable and comfortable. If you have any questions or require further assistance, 
+            please do not hesitate to contact our reservations team <a href="mailto:reservasions@crystal.com">Send an email</a>
+        </p>
+        <!-- Buttons to Navigate Booking and Adventure -->
+        <div class="paragraphButtons">
+            <a href="#hotelscroll" class="h-btn">Book Now</a> | <a href="#frombutton" class="h-btn">Book Adventure</a>
+        </div>
+    </div>
+    <br><br>
+
+    <div class="container">
+        <!-- Booking Form -->
+        <div class="form">
+            <form id="booking_form">
+                <fieldset>
+                    <div class="booking_forms">
+                        <h3 id="hotelscroll">Hotel Booking</h3>
+                        <div class="hotels-booking">
+                            <div class="userInput">
+                                <label for="nameInput">Name  </label>
+                                <input type="text" id="user_name" maxlength="20" required>
+                            </div>
+                            <br>
+                            <div class="userInput">
+                                <label for="userEmail">Email </label>
+                                <input type="email" id="user_email" required>
+                            </div>
+                            <br>
+                            <div class="userInput">
+                                <label for="userAddress">Address </label>
+                                <input type="text" id="user_address" required>
+                            </div>
+                            <br>
+                            <div class="userInput">
+                                <label for="userPhone">Phone Number  </label>
+                                <input type="tel" name="phone" id="user_phone" required="required" placeholder="With country code">
+                            </div>
+                            <br>
+                            <div class="userInput">
+                                <label for="hotel">Select Hotel</label>
+                                <select name="hotel" id="hotel" required>
+                                    <option value="" disabled selected hidden>Select an option</option>
+                                    <option value="Sigiriya">Sigiriya</option>
+                                    <option value="Nuwara-Eliya">Nuwara-Eliya</option>
+                                </select>                        
+                            </div>
+                            <br>
+                            <!-- Duration -->
+                            <div class="userInput">
+                                <label for="checkIn">Check-In Date</label>
+                                <input type="date" name="Check-in" id="check_in" required>
+                            </div>
+                            <br>
+                            <div class="userInput">
+                                <label for="checkOut">Check-Out Date</label>
+                                <input type="date" name="check-out" id="check_out">
+                            </div>
+
+                            <!-- Room Types -->
+                            <div class="userSelection">
+                                <br>
+                                <p>Select Room Type</p>
+
+                                <div class="userInput">
+                                    <label for="single room">Single Rooms </label>
+                                    <input type="number" id="single_room" name="room_type" min="0" max="30" value="0">
+                                </div>
+                                <br>
+                                <div class="userInput">
+                                    <label for="double room">Double Rooms </label>
+                                    <input type="number" id="double_room" name="room_type" min="0" max="50" value="0">
+                                </div>
+                                <br>
+                                <div class="userInput">
+                                    <label for="triple room">Triple Rooms </label>
+                                    <input type="number" id="triple_room" name="room_type" min="0" max="30" value="0">
+                                </div>
+                                <br>
+
+                            <!-- Guest Count -->
+                            <div class="userInput">
+                                <label for="adult">Number of Adults</label>
+                                <input type="number" id="adult_count_hotel" min="0" max="100" required>
+                            </div>
+                            <br>
+                            <div class="userInput">
+                                <label for="kid">Number of Kids</label>
+                                <input type="number" id="kid_count_hotel" min="0" max="100" placeholder="Kids above 5 years">
+                            </div>
+                            <br>
+
+                            <!-- Extra Amenities -->
+                            <div class="userSelection">
+                                <p>Customize your booking with additional amenities</p>
+                                <input type="checkbox" name="extras" id="wifi">
+                                <label for="wifi">WiFi</label>
+                                <br>
+                                <input type="checkbox" name="extras" id="poolView">
+                                <label for="poolView">Pool View</label>
+                                <br>
+                                <input type="checkbox" name="extras" id="gardenView">
+                                <label for="gardenView">Garden View</label>
+                                <br>
+                                <input type="checkbox" name="extras" id="extraBed" value="extraBed">
+                                <label for="extraBed">Extra Beds</label>
+                                <div class="num-beds">
+                                    <label for="numBeds">Number of Extra Beds</label>
+                                    <input type="number" id="num_beds" min="0" max="20">
+                                </div>
+                                <br>
+                            </div>
+                            <!-- Promo Code Input -->
+                            <div class="promo-code">
+                                <label for="promoCode">Enter Promo Code</label>
+                                <input type="text" id="promo_code" placeholder="Enter Promo Code">
+                            </div>
+                            <br>
+                            <div>
+                                <p>Total Cost : <span id="live_hotel_cost"></span></p>
+                                <p>Loyalty points under your name : <span id="live_loyalty_points"></span> </p>
+                            </div>
+                        </div>
+                        <br>
+                        <!-- form buttons -->
+                        <div class="form_buttons">
+                            <button type="button" id="check_hotel_cost" onclick="BookNowButton()" class="her-btn">Book Now</button>
+                            <button type="button" id="check_Loyalty" class="he-btn">Check Loyalty Points</button>
+                            <button type="button" id="apply_favourites" class="he-btn">Apply to Favourites</button>
+                        </div>
+                        <br>
+                        <div>
+                            <p id="hotel_output"></p>
+                        </div>
+                        <hr>
+                        <!-- adventure booking -->
+                        <br>
+                        <div class="adventure-booking">
+                            <h3 id="frombutton">Adventure Booking - Diving</h3>
+                            <div class="userInput">
+                                <label for="adventure_date">Reserve Date</label>
+                                <input type="date" name="Check-in" id="adv_date">
+                            </div>
+                            <div>
+                                <!-- Slecting time slot -->
+                                <p>Select a time slot</p>
+                                <input type="radio" id="morning" name="time_slot">
+                                <label for="morning">9:00 AM - 10:00 AM</label>
+                                <br>
+                                <input type="radio" id="late_morning" name="time_slot">
+                                <label for="late_morning">11:00 AM - 12:00 PM</label>
+                                <br>
+                                <input type="radio" id="afternoon" name="time_slot">
+                                <label for="afternoon">1:00 PM - 2:00 PM</label>
+                                <br>
+                                <input type="radio" id="late_afternoon" name="time_slot">
+                                <label for="late_afternoon">3:00 PM - 4:00 PM</label>
+                            </div>
+                            <!-- Guide Preference -->
+                            <div class="userSelection">
+                                <p>Prefer Diving</p>
+                                <div>
+                                    <input type="radio" name="guide_selection" id="with_guide" value="With Guide">
+                                    <label for="with_guide">With Guide</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="guide_selection" id="without_guide" value="Without Guide">
+                                    <label for="without_guide">Without Guide</label>
+                                </div>
+                            </div>
+                            <br>
+                            <!-- Guest count for diving local, foreigner -->
+                            <div class="userInput">
+                                <label for="num_local_adults">Number of Adults - Local</label>
+                                <input type="number" name="adult-count" min="0" max="30" id="num_local_adults">
+                            </div>
+                            <br>
+                            <div class="userInput">
+                                <label for="num_local_kids">Number of Children - Local</label>
+                                <input type="number" name="kid-count" min="0" max="30" id="num_local_kids">
+                            </div>
+                            <br>
+                            <div class="userInput">
+                                <label for="num_foreign_adults">Number of Adults - Foreign</label>
+                                <input type="number" name="adult-count" min="0" max="30" id="num_foreign_adults">
+                            </div>
+                            <br>
+                            <div class="userInput">
+                                <label for="num_foreign_kids">Number of Adults - Foreign</label>
+                                <input type="number" name="kid-count" min="0" max="30" id="num_foreign_kids">
+                            </div>
+                            <!-- Output Area -->
+                            <div class="output area">
+                                <p id="output_adventure">Your Adventure (Diving) Cost is : LKR </p>
+                                <button type="button" onclick="reserveAdventure()" id="reserve_button" class="her-btn">Reserve Now</button>
+                            </div>
+                            <br>
+                            <div>
+                                <p id="adv_result"></p>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        <!-- This is for the types of room next to form -->
+        <div class="content-section">
+            <div>
+                <p id="introductionparadiving">
+                    Are you looking for a comfortable and affordable stay in Nuwara Eliya or Sigiriya? Whether you are traveling solo, with a partner, or with your family, we have the perfect room for you. 
+                    Choose from our three types of rooms, each with its own features and benefits.
+                </p>
+            </div>
+            <br>
+            <div class="roomsinbooking">
+                <h3>Single Standard</h3>
+                <br>
+                <img src="Media/roomSingle.jpg" alt="single">
+                <p>A cozy and budget-friendly room for one person with a single bed, a desk, a wardrobe, and a private bathroom. Enjoy free Wi-Fi, air conditioning, and a flat-screen TV with cable channels. <b> Ideal for business travelers or solo adventurers.</b></p>
+            </div>
+
+            <br><br>
+            <div class="roomsinbooking">
+                <h3>Double Deluxe</h3>
+                <br>
+                <img src="Media/roomDouble.jpg" alt="double">
+                <p>A spacious and luxurious room for two people with either one double bed or two twin beds, a sofa, a coffee table, and a private bathroom with a bathtub. Enjoy free Wi-Fi, air conditioning, a mini-fridge, a microwave, and a flat-screen TV with cable channels and Netflix. <b>Ideal for couples or friends.</b></p>
+            </div>
+
+            <br><br>
+            <div class="roomsinbooking">
+                <h3>Triple Executive</h3>
+                <br>
+                <img src="Media/roomTriple.jpg" alt="triple">
+                <p>A large and elegant room for three people with either one double bed and one twin bed, or three twin beds, a work desk, a lounge chair, and a private bathroom with a shower. Enjoy free Wi-Fi, air conditioning, a mini-bar, a coffee maker, and a flat-screen TV with cable channels and Amazon Prime.<b> Ideal for families or groups.</b></p>
+            </div>
+
+            <br><br>
+            <hr>
+            <br><br>
+
+            <!-- Adventure -->
+            <div class="divingpictures">
+                <h2>Ocean Diving</h2>
+                <p id="divingtagline">Discover the Hidden Treasures of the Sea</p>
+                <br>
+                <p id="paragraphdiving">
+                    Dive into the mesmerizing depths of the ocean for an unforgettable adventure! <br> Discover the vibrant marine life and explore the underwater world with our thrilling diving experience. Feel the rush as you immerse yourself in the crystal-clear waters, encountering exotic creatures and colorful reefs. Whether you're an experienced diver or a beginner, 
+                    this one-hour escapade promises awe-inspiring moments for all.
+                </p>
+                <br>
+                <ul class="listfordiving">
+                    <li>Local Adults (1 hr) - 5000 LKR</li>
+                    <li>Local Kids (above 5 years) - 2000 LKR</li>
+                    <li>Foreign Adults - 10000 LKR</li>
+                    <li>Foreign Kids - 5000 LKR</li>
+                </ul>
+                <br>
+                <p>For those seeking guidance during this exhilarating dive :</p>
+                <br>
+                <ul class="listfordiving">
+                    <li>Adult Guide - Additional 1000 LKR</li>
+                    <li>Kids Guide - Additional 500 LKR</li>
+                </ul>
+                <br>
+                <img src="Media/divingok.jpg" alt="diving" id="divingimage">
+                <br> <br>
+                <img src="Media/divingperson.jpg" alt="diving">
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <!-- This is the footer Area -->
+
+    <section class="footer">
+        <div class="footer-col">
+            <img src="Media/cologonobg.png" alt="logo">
+            <br>
+        </div>
+        <div class="footer-col">
+            <div class="footer-row">
+                <h4 id="LTD">Crystal Hotels LTD</h4>
+                <h6 id="since">Since 1970</h6>
+                <br>
+                <p id="headoffice">Head Office</p>
+                <p id="address">77, Hortan Place</p>
+                <p id="city">Colombo 07</p>
+                <p id="country">Sri Lanka</p>
+            </div>
+        </div>
+        <div class="footer-col">
+            <p id="infoEmail"><b>Email us via :</b>info@CrystalHaven.com</p>
+            <p id="contactnum"><b>Contact Via :</b>+94 76853 5555 </p>
+            <p id="linkedin"><a href="https://www.linkedin.com/in/hannan76/"><b>🔸 Linkedin</b></a><br></p>
+            <p id="twitter"><a href="https://twitter.com/HannanMunas"><b>🔹Twitter</b></a></p>
+        </div>
+    </section>
+</body>
+</html>

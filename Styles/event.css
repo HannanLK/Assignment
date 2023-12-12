@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    font-family: sans-serif;
+}
+/* This CSS is for the Event html */
+
+.eve-header{
+    min-height: 60vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.3),rgba(4,9,30,0.3)),url(/Media/eventsbackground.jpg) ;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 0;
+}
+nav{
+    display: flex;
+    padding: 1.5% 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 230px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+    padding: 0;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #F39C12;
+    display: block;
+    margin: auto;
+    transition: 0.7s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.eve-header h1{
+    color: white;
+    text-align: center;
+    margin-top: 200px;
+    font-size: 50px;
+    letter-spacing: 2px;
+}
+
+/* Events Paragraph */
+
+.para{
+    text-align: center;
+    margin-left: 9.5%;
+    margin-right: 9.5%;
+    padding-bottom: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+h2{
+    text-align: center;
+    text-decoration: underline #F39C12;
+    font-weight: 550;
+    color:  #1A5276;
+    padding-top: 20px;
+    font-size: 30px;
+}
+/* Events Section 1 */
+.events{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.row{
+    margin-top: 4%;
+    display: flex;
+    justify-content: space-between;
+}
+.event-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+    transition: 0.5s;
+}
+.event-col img:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.737);
+}
+.event-col img{
+    width: 100%;
+}
+.event-col h3{
+    padding-top: 0;
+    font-size: 30px;
+}
+.event-col p{
+    padding: 15px 0 25px;
+}
+.events a{
+    color: #F39C12;
+    text-decoration: underline;
+}
+/* Section 2 christmas */
+
+.events-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+    transition: 0.5s;
+}
+.events-col img{
+    width: 100%;
+}
+.events-col h3{
+    padding-top: 0;
+    font-size: 30px;
+}
+.events-col p{
+    padding: 15px 0 25px;
+}
+.events-col img:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.737);
+}
+
+/* Mobile View for Events page  */
+
+@media (max-width: 700px) {
+    .eve-header {
+        min-height: 40vh; /* Adjust the header height as needed */
+    }
+    nav {
+        padding: 1% 5%;
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+    }
+
+    nav img {
+        width: 150px; 
+    } 
+
+    .nav-links ul {
+        text-align: right;
+    }
+
+    .nav-links ul li {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .nav-links ul li::after {
+        display: none; 
+    }
+
+    .eve-header h1 {
+        font-size: 36px;
+        margin-top: -1%;
+    }
+
+    .para {
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: left;
+    }
+
+    h2 {
+        font-size: 24px; 
+    }
+
+    .events {
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    .row {
+        margin-top: 3%;
+        flex-direction: column; 
+    }
+
+    .event-col,
+    .events-col {
+        flex-basis: 100%; 
+    }
+
+    .event-col img,
+    .events-col img {
+        width: 100%;
+    }
+
+    .event-col h3,
+    .events-col h3 {
+        font-size: 24px;
+    }
+
+    .event-col p,
+    .events-col p {
+        padding: 15px 0;
+        text-align: left;
+    }
+}
+
+/* This is for the footer section */
+
+.footer {
+    display: flex; 
+    align-items: center;
+    background-image:url(/Media/footer.png);
+    color:black; 
+    padding: 30px;
+
+}
+.footer-col {
+    flex: 1; 
+    padding: 20px 0;
+}
+.footer-row{
+    padding-left: 28%;
+}
+.footer img {
+    max-width: 75%;
+    padding-left: 100px;
+}
+h4{
+    margin: 0;
+}
+.footer p{
+    margin:0;
+    font-weight: 500;
+    /* background-color: aliceblue; */
+    width: 80%;
+}
+.footer a{
+    color:#154360; 
+}
+#headoffice, #address, #city, #country, #LTD, #since, #infoEmail, #contactnum, #linkedin, #twitter{
+    background-color: #EAEDED;
+    width: max-content;
+    margin-bottom: 2px;
+    justify-content: center;
+}
+
+/* Mobile View for Footer */
+
+@media (max-width:700px) {
+    @media (max-width:700px){
+        .footer{
+            display: flex;
+            flex-direction: column;
+        }
+        .footer img {
+            max-width: 100%;
+            padding-left: 0;
+            align-items: center;
+        }
+        .footer-col {
+            padding: 10px 0;
+        }
+        .footer-row {
+            padding-left: 5px;
+        }
+        .footer-row h6,p{
+            text-align: center;
+            font-size: medium;
+        }
+    } 
+}

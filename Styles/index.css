@@ -1,0 +1,980 @@
+
+*{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* This CSS is for the Home */
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.3),rgba(4,9,30,0.3)), url(/Media/home.png) ;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 0;
+}
+.sub-header{
+    background: #154360;
+    max-height: 115px;
+    background-size: cover;
+    position: relative;
+    
+}
+.sub-header-1{
+    min-height: 80vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.3),rgba(4,9,30,0.3)),url(/Media/resbackground.jpg) ;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 0;
+}
+nav{
+    display: flex;
+    padding: 2% 5%;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+nav img{
+    width: 230px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+    padding: 0;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #F39C12;
+    display: block;
+    margin: auto;
+    transition: 0.7s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 75%;
+    color: white;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-40%);
+    text-align: center;
+    font-weight: 700;
+}
+.text-box h2{
+    font-size: 50px;
+    font-weight: 400;
+    font-stretch: expanded;
+    color:white;
+    word-spacing: 5px;
+    padding-bottom: 10px;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid #BA4A00;
+    background: #BA4A00;
+    transition: 0.8s;
+}
+
+/* Mobile for Header Home Page */
+
+@media (max-width:700px) {
+    .header{
+        min-height: 70vh;
+    }
+    nav {
+        padding: 1% 5%;
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+    }
+
+    nav img {
+        width: 150px; 
+    } 
+    
+    .nav-links ul {
+        text-align: right;
+    }
+
+    .nav-links ul li {
+        display: block;
+        padding: 10px 0; 
+
+    }
+
+    .nav-links ul li::after {
+        display: none; 
+    }
+    .text-box{
+        width: 100%;
+        padding-top: 105px;
+    }
+    .text-box h2 {
+        font-size: 20px;
+        padding-bottom: 5px;
+        padding-top: 20px;
+    }
+    .hero-btn {
+        font-size: 10px;
+        padding: 10px 20px;
+    }
+    
+}
+
+/* Home Page Introduction */
+
+.introduction{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    padding-top: 25px;
+}
+img{
+    width: 350px;
+}
+h3{
+    padding-top: 10px;
+    font-size: 21px;
+    word-spacing: 5px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 5px;
+}
+/* Mobile Responsive for Introduction */
+
+@media (max-width: 700px){
+    h3{
+        text-align: center;
+        padding-top: 20px;
+        font-size: medium;
+        margin-bottom: 10px;
+        margin-left: -5%;
+    }
+    img{
+        width: 180px;
+    }
+    .introduction p{
+        text-align: left;
+        margin-left: -5%;
+    }
+}
+/* This CSS is for the Home - Section 1 - Hotels */
+
+.home-hotels{
+    width: 100%;
+    padding-top: 20px;
+    background:#EAEDED;
+    margin: auto;
+    text-align: center;
+}
+h1{
+    text-align: center;
+    text-decoration: underline #F39C12;
+    font-weight: 400;
+    font-size: 28px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+
+}
+.row-1{
+    display: flex;
+    justify-content: space-between;
+}
+.col-1{
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.8s;
+}
+.col-1 h3{
+    padding-bottom: 2px;
+}
+.col-1 img{
+    max-width: 100%;
+    height: 100%;
+    margin-bottom: 5px;
+    max-height: 50vh;
+    border-radius: 8px;
+}
+.col-1 img:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.737);
+}
+.col-1 p{
+    margin-top: 5px;
+    text-align: center;
+
+}
+
+/* Mobile View for the Home Page - Hotels - Section 1 */
+
+@media (max-width:700px){
+    .row-1{
+        flex-direction: column;
+    }
+    .col-1 img{
+        width: 335px;
+        padding: 5px;
+    }
+}
+
+/* This CSS is for the Home - Section 2 - Things To Do */
+
+.home-things p{
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 10px;
+    justify-content: center;
+}
+
+.link-text {
+    text-decoration: none;
+    color: #F39C12; 
+}
+.link-text:hover {
+    text-decoration: underline;
+}
+.home-things img{
+    border-radius: 8px;
+    width: 80%;
+    padding-bottom: 10px;
+}
+.col-2{
+    flex: 1;
+    padding: 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.thingstodobody{
+    background-image: url(/Media/extraback.jpg);
+}
+
+
+/* Mobile View for Home - Things TO Do - Section 2  */
+
+@media (max-width:700px){
+    .home-things p {
+        width: 90%;
+        text-align: left;
+    }
+    .home-things img {
+        width: 90%
+    }
+    .home-things ul{
+        margin-left: -18%;
+    }
+}
+
+/* This CSS is for the Home - Section 3 - Events*/
+
+.home-events{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    margin: auto;
+}
+
+.home-events h3{
+    padding-left: 20px;
+    background-color: #EAEDED;
+    text-align: center;
+}
+.things-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 50px 0;
+}
+.things-1 img{
+    width: 50%;
+    height: auto;
+    max-height: 300px;
+    padding: 15px;
+}
+.things-text{
+    width: 80%;
+    padding-left: 10px;
+}
+.paragraph-1{
+    padding-left: 20px;
+    padding-top: 15px;
+}
+.o-list{
+    margin-top: -40px;
+}
+.o-list li{
+    margin-top: 4px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.paragraph-2{
+    padding-right: 20px;
+    padding-top: 10px;
+}
+/* Mobile View for Home - Events - Section 3 */
+
+@media (max-width:700px) {
+    .home-events h3 {
+        padding-left: 0;
+        text-align: center;
+    }
+    .things-1 {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin: 20px 0;
+    }
+    .things-1 img {
+        max-width: 100%;
+        height: auto;
+        max-height: 300px;
+        padding: 15px;
+    }
+    .things-text {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .paragraph-1,
+    .paragraph-2 {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 10px;
+        text-align: left;
+    }
+    .o-list {
+        margin-top: -10px;
+    }
+    .o-list li {
+        margin-top: 4px;
+    }
+}
+
+/* This CSS is for the Footer Area */
+
+.footer {
+    display: flex; 
+    align-items: center;
+    background-image: url(/Media/footer.png);
+    color: black; 
+    padding: 0px;
+    padding-top: 20px;
+}
+.footer-col {
+    flex: 1; 
+    padding: 20px 0; 
+}
+.footer-row{
+    padding-left: 28%;
+}
+.footer img {
+    max-width: 100%;
+    padding-left: 100px;
+}
+h4{
+    margin: 0;
+}
+.footer p{
+    margin:0;
+    font-weight: 600;
+}
+.footer a{
+    color:#154360; 
+}
+
+#headoffice, #address, #city, #country, #LTD, #since, #infoEmail, #contactnum, #linkedin, #twitter{
+    background-color: #EAEDED;
+    width: max-content;
+    margin-bottom: 2px;
+    justify-content: center;
+}
+
+/* This is the Mobile View for Footer  */
+
+@media (max-width:700px){
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer img {
+        max-width: 100%;
+        padding-left: 0;
+        align-items: center;
+    }
+    .footer-col {
+        padding: 10px 0;
+    }
+    .footer-row {
+        padding-left: 5px;
+    }
+    .footer-row h6,p{
+        text-align: center;
+        font-size: medium;
+    }
+} 
+
+/* Our Hotels and Things To Do our Section 1 */
+
+.hotels-1{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: -5%;
+}
+.hotels-1 h4{
+    font-size: 18px;
+}
+.row{
+    flex: 1;
+    margin-top: 2%;
+}
+.col-left{
+    align-self: flex-start;
+    padding-left: 40px;
+}
+.col-left ul li {
+    margin-bottom: 10px;
+}
+.col-right {
+    text-align: left;
+    padding-right: 25px;
+    margin-left: -60%;
+}
+
+/* Mobile Responsive for Our Hotels and Things To Do */
+
+@media (max-width:700px){
+    .sub-header{
+        min-height: 45vh;
+    }
+    .hotels-1 {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .col-left {
+        padding: 0; 
+        text-align: center; 
+    }
+
+    .col-right {
+        text-align: left;
+        margin-left: 0;
+        padding: 0 10px; 
+    }
+    .col-right p{
+        text-align: left;
+        margin-right: 4px;
+        justify-content: center;
+    }
+
+}
+
+/* Our Hotel Page Photos and Table */
+
+.table-header{
+    padding-bottom: 50px;
+    text-align:center;
+    color: #154360;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+.hotel {
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.Sigiriya{
+    background: #EAEDED;
+}
+.row-test{
+    margin-top: 4%;
+    display: flex;
+    justify-content: space-between;
+}
+.hotel-col{
+    flex-basis: 48%;
+    padding: 25px 2px;
+    margin-right: 2%;
+}
+.hotel-col img{
+    width: 75%;
+    padding-left: 120px;
+}
+.hotel-col h1{
+    padding-top: 0;
+    font-size: 30px;
+    text-align: center;
+}
+.hotel-col p{
+    padding-right: 15px;
+    text-align: left;
+}
+
+.tab-1{
+    border-collapse: collapse;
+    width: 60%;
+    margin: 0 auto;
+}
+.tab-1 th, .tab-1 td {
+    border: 1px solid darkslategray; 
+    padding: 8px;
+    text-align: left;
+    margin: auto;
+    font-weight: 300;
+}
+.tab-1 th {
+    text-align: center;
+}
+
+/* Mobile Responsive for Photos */
+
+@media (max-width:700px) {
+    .hotel-col {
+        flex-basis: 100%; 
+        padding: 15px 8px;
+    }
+
+    .hotel-col img {
+        width: 100%; 
+        padding-left: 3px;
+        flex-direction: row;
+    }
+     
+    .hotel-col h1 {
+        font-size: 24px;
+    } 
+
+    .hotel-col p:last-child {
+        margin-bottom: 20px; 
+    }
+}
+
+/* Mobile Responsive Table */
+
+@media (max-width:700px){
+    .tab-1 {
+        width: 90%; 
+        height: auto;
+        max-width: 100%;
+        overflow-x: auto;
+    }
+    .tab-1 th,
+    .tab-1 td {
+        padding: 2px; 
+        font-size: 10px; 
+    }
+    .tab-1 iframe{
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Things To Do - Section 2 - Photos  */
+
+.home-things ul{
+    padding-left: 47%;
+}
+.home-things ul li{
+    margin: auto;
+    padding: 3px 0;
+}
+.home-things {
+    width: 80%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.home-things h1 {
+    margin-top: 5%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3%;
+    
+}
+
+.things-col {
+    flex-basis: calc(50% - 10px); /* 50% minus margin */
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.things-col img {
+    width: 90%;
+    border-radius: 10px;
+}
+
+.things-col h3{
+    background-color: #154360;
+    color: #EAEDED;
+    border-radius: 3px;
+    text-align: center;
+    height: 13px;
+    letter-spacing: 6px;
+}
+
+.thingstodolist a{
+    text-decoration: none;
+    color: #BA4A00;
+}
+.thingstodolist:hover {
+    text-decoration: underline;
+}
+
+
+/* This is for the Restaurant HTML page ****************************/ 
+
+.intro{
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    font-family: sans-serif;
+    font-size: 17px;
+}
+.res-things {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.res-things img{
+    border-radius: 10px;
+}
+.res-link{
+    background-color: #EAEDED;
+    text-align: center;
+    font-size: 17px;
+    padding: 20px;
+    word-spacing: 2px;
+}
+.res-link a{
+    color:white;
+    text-decoration: underline;
+}
+.res-things a{
+    color:#BA4A00;
+    text-decoration: underline;
+}
+.h-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: #BA4A00 ;
+    position: relative;
+    cursor: pointer;
+}
+.h-btn:hover{
+    border: 1px solid black;
+    background: black;
+    transition: 0.8s;
+}
+
+
+
+/* Mobile Responsive for Restaurant Page */
+
+@media (max-width: 700px) {
+    .intro,
+    .res-things {
+        width: 90%;
+        text-align: center;
+    }
+    .intro p{
+        text-align: left;
+    }
+    .res-things img {
+        max-width: 100%; 
+    }
+
+    .res-link {
+        font-size: 14px;
+    }
+
+    .row {
+        display: block; 
+        margin-top: 10px; 
+    }
+
+    .res-col {
+        margin-bottom: 20px;
+    }
+    .res-col h3{
+        text-align: center;
+    }
+    .h-btn {
+        width: 20%;
+        padding: 10px;
+    }
+    .things-col iframe{
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/* Booking HTML Page*****************************************************************************************/
+.booking_background{
+    background: #EAF2F8;
+    background-image: url(/Media/bookingBack.jpg);
+}
+.booking-main{
+    /* background: #EAEDED; */
+    width: 70%;
+    margin: auto;
+}
+.booking-main p{
+    text-align: center;
+}
+#paragraphBooking{
+    /* margin-left: -100px; */
+    text-align: center;
+}
+.para a{
+    color: #BA4A00;
+}
+.booking_list{
+    margin-left: 200px;
+}
+.paragraphButtons{
+    text-align: center;
+}
+
+/* Form */
+.container{
+    display: flex;
+    /* flex-wrap: wrap;  */
+    /*  */
+    justify-content: space-between;
+    overflow: hidden;
+}
+.form{
+    flex: 1;
+    padding-left: 50px;
+    /* background: #EAEDED; */
+    border-radius: 8px;
+    margin-right: 10%;
+    margin-bottom: 5%;
+}
+
+.content-section{
+    flex: 1;
+    border-radius: 8px;
+    margin-right: 30px;
+    margin-top: 3%;
+    margin-left: -50px;
+    padding-right: 20px;
+    transition: 2s;
+    transition-delay: 0.5s;
+}
+
+.content-section img{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.737);
+}
+
+input, select{
+    padding: 10px;
+    width: 90%;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+#wifi, #poolView, #gardenView, #extraBed, #morning, #late_morning, #afternoon, #late_afternoon, #with_guide, #without_guide{
+    margin-left: -100px;
+}
+
+label{
+    margin-bottom: 5px;
+    display: block;
+}
+
+.adventure-booking h3{
+    text-align: center;
+}
+
+.booking_forms h3{
+    text-align: center;
+}
+.userInput{
+    font-size: 18px;
+}
+
+/* Content next to form */
+.content-section p{
+    text-align: justify;
+}
+
+.content-section h3{
+    background-color: #154360;
+    color: #EAEDED;
+    border-radius: 3px;
+    text-align: center;
+    height: 13px;
+    letter-spacing: 6px;
+}
+
+.roomsinbooking{
+    text-align: center;
+}
+
+.roomsinbooking p{
+    text-align: center;
+}
+.roomsinbooking img{
+    border-radius: 5px;
+}
+
+.highlight-background {
+    background-color: lightyellow;
+    border-radius: 6px;
+    padding-left: 8px; 
+}
+
+.divingpictures{
+    text-align: center;
+}
+
+.divingpictures p{
+    text-align: center;
+}
+.divingpictures img{
+    border-radius: 5px;
+}
+.divingpictures h2{
+    text-align: center;
+}
+#divingtagline{
+    text-align: center;
+}
+
+#paragraphdiving, #introductionparadiving{
+    text-align: center;
+    justify-content: space-between;
+}
+
+.listfordiving{
+    text-align: left;
+    margin-left: 160px;
+}
+
+
+/* Button for Book Now and Reserve Adventure */
+.her-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: #BA4A00 ;
+    position: relative;
+    cursor: pointer;
+}
+
+.her-btn:hover{
+    border: 1px solid black;
+    background: black;
+    transition: 0.8s;
+} 
+
+/* Button for apply to favourites and check loyalty */
+.he-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: white ;
+    position:relative;
+    cursor: pointer;
+}
+
+.he-btn:hover{
+    border: 1px solid black;
+    background: black;
+    transition: 0.8s;
+    color: #fff;
+}
+
+/* Mobile Responsive for booking */
+@media screen and (max-width: 780px) {
+    .booking-main {
+        width: 90%; 
+        margin: auto;
+    }
+    .booking_list {
+        margin-left: 0; 
+    }
+    .paragraphButtons {
+        text-align: center;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .form {
+        padding: 20px;
+        margin: 20px; 
+    }
+    .content-section {
+        margin-left: 0; 
+        padding: 20px; 
+        margin: 20px; 
+    }
+
+    input, select {
+        width: 80%;
+    }
+
+    label {
+        margin-bottom: 8px;
+    }
+}
