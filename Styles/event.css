@@ -7,7 +7,7 @@
 .eve-header{
     min-height: 60vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.3),rgba(4,9,30,0.3)),url(/Media/eventsbackground.jpg) ;
+    background-image: linear-gradient(rgba(4,9,30,0.3),rgba(4,9,30,0.3)),url(../Media/eventsbackground.jpg) ;
     background-size: cover;
     background-position: center;
     position: relative;
