@@ -188,6 +188,9 @@ function calculateAdventureCost() {
     totalCost += numLocalKids * 2000;
     totalCost += numForeignAdults * 10000;
     totalCost += numForeignKids * 5000;
+
+    // totalCost = numLocalAdults * 5000 + numLocalKids * 2000 + numForeignAdults * 10000 + numForeignKids * 5000;
+    console.log(`Total Cost : ${totalCost}`)
   
     // Additional cost for guide preference
     if (guidePreference) {
@@ -196,7 +199,20 @@ function calculateAdventureCost() {
         totalCost += numLocalKids * 500;
         totalCost += numForeignAdults * 1000;
         totalCost += numForeignKids * 500;
-        
+
+        // if (numLocalAdults > 0) {
+        //     totalCost += 1000; // Add adult guide cost
+        // }
+        // if (numLocalKids > 0) {
+        //     totalCost += 500; // Add kid guide cost
+        // }
+        // if (numForeignAdults > 0) {
+        //     totalCost += 1000; // Add adult guide cost
+        // }
+        // if (numForeignKids > 0) {
+        //     totalCost += 500; // Add kid guide cost
+        // }
+
         console.log(`Guide selected | Total cost would be : ${totalCost}`)
       }
     }
