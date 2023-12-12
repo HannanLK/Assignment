@@ -395,7 +395,7 @@ h1{
 .footer {
     display: flex; 
     align-items: center;
-    background-image: url(/Media/footer.png);
+    background-image: url(../Media/footer.png);
     color: black; 
     padding: 0px;
     padding-top: 20px;
