@@ -8,7 +8,7 @@
 .wed-header{
     min-height: 60vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.3),rgba(4,9,30,0.3)),url(/Media/eventsweddingback.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.3),rgba(4,9,30,0.3)),url(../Media/eventsweddingback.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -202,7 +202,7 @@ h2{
 .footer {
     display: flex; 
     align-items: center;
-    background-image: url(/Media/footer.png);
+    background-image: url(../Media/footer.png);
     color:black; 
     padding: 30px; 
 }

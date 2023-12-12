@@ -285,7 +285,7 @@ h1{
 }
 
 .thingstodobody{
-    background-image: url(/Media/extraback.jpg);
+    background-image: url(../Media/extraback.jpg);
 }
 
 
@@ -763,7 +763,7 @@ h4{
 /* Booking HTML Page*****************************************************************************************/
 .booking_background{
     background: #EAF2F8;
-    background-image: url(/Media/bookingBack.jpg);
+    background-image: url(../Media/bookingBack.jpg);
 }
 .booking-main{
     /* background: #EAEDED; */
