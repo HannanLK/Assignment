@@ -79,12 +79,13 @@ function initialize() {
 
 //Function to calculate hotel booking cost
 function calculateHotelCost() {
-    single_room_count = parseInt(singleRoom.value);
-    double_room_count = parseInt(doubleRoom.value);
-    triple_room_count = parseInt(tripleRoom.value);
-    kid_count = parseInt(numKidHotel.value);
-    adult_count = parseInt(adult_count_hotel.value)
-    num_beds = parseInt(num_beds_extra.value);
+
+    single_room_count = parseInt(singleRoom.value) || 0;
+    double_room_count = parseInt(doubleRoom.value) || 0;
+    triple_room_count = parseInt(tripleRoom.value) || 0;
+    kid_count = parseInt(numKidHotel.value) || 0;
+    adult_count = parseInt(adult_count_hotel.value) ||0;
+    num_beds = parseInt(num_beds_extra.value) || 0;
 
     hotel_cost = single_room_count * 25000 + double_room_count * 35000 + triple_room_count * 40000;
     other_cost = kid_count * 5000 + num_beds *8000;
@@ -114,7 +115,6 @@ function checkHotelCost() {
     }
 
 }
-
 
 
 //Function to save data in local storage
@@ -158,9 +158,7 @@ function check_Loyalty() {
     live_loyalty_points.innerText = loyalty_points;
 }
 
-// function BookNowButton(){
-//     calculateHotelCost();
-// }
+// 
 
 function BookNowButton(){
     calculateHotelCost();
@@ -171,11 +169,11 @@ function BookNowButton(){
 
 // Function to calculate adventure cost *****************************************************************************************
 function calculateAdventureCost() {
-    const numLocalAdults = parseInt(document.getElementById('num_local_adults').value);
-    const numLocalKids = parseInt(document.getElementById('num_local_kids').value);
-    const numForeignAdults = parseInt(document.getElementById('num_foreign_adults').value);
-    const numForeignKids = parseInt(document.getElementById('num_foreign_kids').value);
-    const guidePreference = document.querySelector('input[name="guide_selection"]:checked');
+    const numLocalAdults = parseInt(document.getElementById('num_local_adults').value) || 0;
+    const numLocalKids = parseInt(document.getElementById('num_local_kids').value) || 0;
+    const numForeignAdults = parseInt(document.getElementById('num_foreign_adults').value) || 0;
+    const numForeignKids = parseInt(document.getElementById('num_foreign_kids').value) || 0;
+    const guidePreference = document.querySelector('input[name="guide_selection"]:checked') || 0;
   
     let totalAdults=0;
     let totalChildren=0;
@@ -199,19 +197,6 @@ function calculateAdventureCost() {
         totalCost += numLocalKids * 500;
         totalCost += numForeignAdults * 1000;
         totalCost += numForeignKids * 500;
-
-        // if (numLocalAdults > 0) {
-        //     totalCost += 1000; // Add adult guide cost
-        // }
-        // if (numLocalKids > 0) {
-        //     totalCost += 500; // Add kid guide cost
-        // }
-        // if (numForeignAdults > 0) {
-        //     totalCost += 1000; // Add adult guide cost
-        // }
-        // if (numForeignKids > 0) {
-        //     totalCost += 500; // Add kid guide cost
-        // }
 
         console.log(`Guide selected | Total cost would be : ${totalCost}`)
       }
